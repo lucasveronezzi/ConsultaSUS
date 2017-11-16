@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:theme="@style/InputTheme"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_dados"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp">
+
+            <EditText
+                android:id="@+id/endereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Endereço"
+                android:inputType="text"
+                android:maxLength="60"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_dados"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp">
+
+            <EditText
+                android:id="@+id/numero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numero"
+                android:inputType="numberSigned"
+                android:maxLength="5"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_dados"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:id="@+id/complemento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Complemento"
+            android:inputType="text"
+            android:maxLength="40"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_dados"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:id="@+id/bairro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bairro"
+            android:inputType="text"
+            android:maxLength="14"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.4"
+            android:background="@drawable/input_dados"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp">
+
+            <EditText
+                android:id="@+id/cidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cidade"
+                android:inputType="text"
+                android:maxLength="20"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/input_dados"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp">
+
+            <EditText
+                android:id="@+id/uf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Estado"
+                android:inputType="textCapCharacters"
+                android:maxLength="2"
+                android:maxLines="1" />
+
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_dados"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:id="@+id/cep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CEP"
+            android:inputType="numberSigned"
+            android:maxLength="9"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>

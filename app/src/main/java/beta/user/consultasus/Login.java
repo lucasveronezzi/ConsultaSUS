@@ -48,6 +48,11 @@ public class Login extends AppCompatActivity {
         }
     }
 
+    public void click_registrar(View v){
+        Intent intent = new Intent(this, Registrar.class);
+        startActivity(intent);
+    }
+
     public boolean validate(){
         if(usuario.getText().length() < 3){
             Toast.makeText(this,"Usuário inválido", Toast.LENGTH_SHORT).show();
@@ -82,8 +87,8 @@ public class Login extends AppCompatActivity {
         @Override
         protected void onPostExecute(final Boolean success) {
             if(success){
-               /* Intent intent = new Intent(context, );
-                startActivity(intent);*/
+                Intent intent = new Intent(context, Main.class );
+                startActivity(intent);
                 finish();
             }else{
                 include_form.setVisibility(View.VISIBLE);

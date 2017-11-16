@@ -43,7 +43,6 @@
             android:drawableLeft="@drawable/icon_login_senha"
             android:drawablePadding="10dp"
             android:hint="@string/prompt_password"
-            android:imeActionId="@+id/login"
             android:imeActionLabel="@string/action_sign_in_short"
             android:imeOptions="actionUnspecified"
             android:inputType="textPassword"
@@ -73,12 +72,13 @@
         android:textColor="@android:color/background_light"
         android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/registrar"
+    <Button
+        android:id="@+id/button"
+        style="@android:style/Widget.Holo.Button.Borderless"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="click_registrar"
         android:text="@string/registrar"
         android:textAlignment="center"
         android:textColor="@android:color/background_light"

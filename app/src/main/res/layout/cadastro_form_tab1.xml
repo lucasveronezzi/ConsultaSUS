@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:theme="@style/InputTheme"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_dados"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:id="@+id/nome_completo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome Completo"
+            android:inputType="text"
+            android:maxLength="40"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_dados"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:id="@+id/cpf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CPF"
+            android:inputType="numberSigned"
+            android:maxLength="14"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_dados"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:id="@+id/num_sus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Numero do SUS"
+            android:inputType="numberSigned"
+            android:maxLength="18"
+            android:maxLines="1" />
+
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>
