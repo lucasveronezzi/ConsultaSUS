@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ArrayConsultas">
+        <item>Clinico Geral</item>
+        <item>Pediatria</item>
+        <item>Genicologista</item>
+        <item>Cardiologista</item>
+    </string-array>
+</resources>
