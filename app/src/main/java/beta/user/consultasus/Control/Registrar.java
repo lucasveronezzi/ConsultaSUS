@@ -1,4 +1,4 @@
-package beta.user.consultasus;
+package beta.user.consultasus.Control;
 
 import android.content.Context;
 import android.support.design.widget.TabLayout;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import beta.user.consultasus.R;
 import beta.user.consultasus.cadastro.PagerCadastro;
 
 public class Registrar extends AppCompatActivity {

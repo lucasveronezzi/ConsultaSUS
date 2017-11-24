@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="beta.user.consultasus.Main">
+    tools:context="beta.user.consultasus.Control.Main">
+
+    <include
+        layout="@layout/tab_cadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager_cadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_register"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_save"

@@ -1,10 +1,6 @@
-package beta.user.consultasus;
+package beta.user.consultasus.Control;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -12,7 +8,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.RelativeLayout;
+
+import beta.user.consultasus.R;
+import beta.user.consultasus.View.Agendamento;
+import beta.user.consultasus.View.Cadastro;
 
 public class Main extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -62,13 +61,14 @@ public class Main extends AppCompatActivity
         int id = item.getItemId();
         if (id == R.id.nav_agenda) {
             toolbar.setTitle("Agendamento de Consultas");
-            new Agendamento(this);
+            new Controle_Agendamento(this);
         } else if (id == R.id.nav_dados) {
             toolbar.setTitle("Dados Cadastrais");
-            new Cadastro(this);
+            new Controle_Cadastro(this);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

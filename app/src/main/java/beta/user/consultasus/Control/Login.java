@@ -1,4 +1,4 @@
-package beta.user.consultasus;
+package beta.user.consultasus.Control;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import beta.user.consultasus.R;
 
 public class Login extends AppCompatActivity {
     private TextView usuario;
