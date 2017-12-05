@@ -4,15 +4,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 import beta.user.consultasus.R;
+import beta.user.consultasus.utils.APIHTTP;
 
 public class Login extends AppCompatActivity {
     private TextView usuario;
@@ -20,6 +23,9 @@ public class Login extends AppCompatActivity {
     private Context context;
     private View include_form;
     private View include_loading;
+
+    public static String nome;
+    public static String codigo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +75,8 @@ public class Login extends AppCompatActivity {
 
     public class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
         private String s_usuario, s_senha;
+        private String erro;
+        private JSONObject dados = null;
         UserLoginTask(String email, String password) {
             s_usuario = email;
             s_senha = password;
@@ -81,9 +89,21 @@ public class Login extends AppCompatActivity {
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            if(s_usuario.equals("admin") && s_senha.equals("admin")){
-                return true;
+            try {
+                dados = APIHTTP.getObject("login/"+s_usuario+"/"+s_senha,"GET","");
+                if(dados.getString("acesso") == "ok"){
+                    nome = dados.getString("nome");
+                    codigo = dados.getString("codigo");
+                    return true;
+                }
+                return false;
+            } catch (Exception e) {
+                if(e.getMessage().startsWith("Unable to resolve host"))
+                    erro = "Falha ao tentar se conectar com o servidor web.\nVerifique se seu celular possui sinal com a internet.";
+                else
+                    erro = e.getMessage();
             }
+
             return false;
         }
         @Override
